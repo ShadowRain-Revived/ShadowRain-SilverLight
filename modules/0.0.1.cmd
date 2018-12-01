@@ -9,10 +9,10 @@ EndLocal
 ::modules\0.0.4.bat -LoadModule
 %cd%\0.0.1.cmd
 Set Command=
+Set "count=0"
 
 :Entry
-Set "count=0"
-Set /P Command="<%cd%> (~test) "
+Set /P Command="<%cd%> "
 For %%a In (!Command!) Do (
     Set /A count+=1
     Set Value!count!=%%a
