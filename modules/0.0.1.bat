@@ -1,17 +1,36 @@
 @Echo Off
 SetLocal EnableExtensions EnableDelayedExpansion
-If "%1"=="" Goto Entry
+Goto Module_Config
 
-:Loop
-Set currentDir=%cd%
-Cd !currentDir!
-EndLocal
-%cd%\0.0.1.cmd
-Set Command=
-Set "count=0"
+:Module_Config
+If "!Core_AllowModuleOffSet!"=="0" (
+	If "%1"=="-LoadModule" (
+		Set "count=0"
+		If "!Core_RequireUser!"=="1" (
+			If "!Uac_Username!"=="" (
+				:: Handle error here ?
+				Exit
+			)
+			Goto Entry
+		)
+	) Else (
+		:: Handle error here ?
+		Exit
+	)
+) Else (
+	If "!Core_RequireUser!"=="1" (
+		If "!Uac_Username!"=="" (
+			:: Handle error here ?
+			Exit
+		)
+		Goto Entry
+	) Else (
+		Goto Entry
+	)
+)
 
 :Entry
-Set /P Command="<%cd%> "
+Set /P Command="<%cd%> (~)> "
 For %%a In (!Command!) Do (
     Set /A count+=1
     Set Value!count!=%%a
@@ -33,7 +52,14 @@ If "!Value1!"=="log" Goto Log
 If "!Value1!"=="sysinfo" Goto SysInfo
 If "!Value1!"=="mkfile" Goto MkFile
 If "!Value1!"=="delfile" Goto DelFile
-Goto Entry
+Goto Loop
+
+:Loop
+Set currentDir=%cd%
+Cd !currentDir!
+EndLocal
+%cd%\0.0.1.bat
+Set Command=
 
 :MkDir
 If "!Value2!"=="" (
