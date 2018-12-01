@@ -7,18 +7,19 @@ Set currentDir=%cd%
 ::Cd !shadowDir!
 EndLocal
 ::modules\0.0.4.bat -LoadModule
+%cd%\0.0.1.cmd
 Set Command=
 
 :Entry
+Set "count=0"
 Set /P Command="<%cd%> (~test) "
 For %%a In (!Command!) Do (
     Set /A count+=1
     Set Value!count!=%%a
 )
-If "!Value1!"=="" Goto Loop
-If "!Value1!"=="""" Goto Loop
 If "!Value1!"=="md" Goto MkDir
 If "!Value1!"=="rd" Goto RD
+Goto Entry
 
 :MkDir
 If "!Value2!"=="" (
