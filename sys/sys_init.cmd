@@ -15,6 +15,12 @@ Exit
 
 :: Not ready yet
 :: :System.loadGraphics
-:: graphics\graphics -PreInit Graphics.Graphics
-:: Echo Something happened.
+:: If "%Core.IsPreLoaded%"=="True" (
+::	graphics\graphics -PreInit Graphics.Graphics
+::	Echo Something happened.
+::	Exit
+:: ) Else (
+::	Echo The core was not loaded correctly.
+::	Exit
+:: )
 :: Exit
