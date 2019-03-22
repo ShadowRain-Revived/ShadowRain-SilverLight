@@ -42,7 +42,7 @@ If Defined Graphics.DefaultColor (
 		If Defined Graphics.ScriptColor (
 			If Defined Graphics.ErrorColor (
 				If Defined Graphics.SystemFault (
-					:: do something here
+					Goto Graphics.loadGraphics
 				) Else (
 					:: value "Graphics.SystemFault" isn't set
 				)
@@ -57,4 +57,16 @@ If Defined Graphics.DefaultColor (
 	)
 ) Else (
 	:: value "Graphics.DefaultColor" isn't set
+)
+
+:Graphics.loadGraphics
+:: Set color to default
+Color %Graphics.DefaultColor%
+:: Reload into system
+If Exist "%cd%\..\sys_init.cmd" (
+	Pushd "%cd%\.."
+	sys_init -GraphicsPreLoaded Graphics.loadGraphics True
+) Else (
+	Echo Missing required system file "core_init.cmd"
+	Pause>Nul
 )
