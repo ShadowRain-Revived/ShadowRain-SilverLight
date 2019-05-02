@@ -1,45 +1,44 @@
 @Echo Off
-If "%1"=="-PreInit" If "%2"=="Core.Core" Goto Core.Core
+If "%1"=="-PreInit" If "%2"=="Core_Core" Goto Core_Core
 Exit
 
-:Core.Core
+:Core_Core
 :: Globals
-Set "Core.Version=0.0.1"
-Set "Core.Directory=%cd%"
-Set "Core.Arch=CS"
+Set "Core_Version=0.0.1"
+Set "Core_Directory=%cd%"
+Set "Core_Arch=CS"
 
 :: Architecture Variables (Only edit if making a custom core)
-Set "Core.ArchVersion=0.0.1"
-Set "Core.ArchName=Cyan Silver"
+Set "Core_ArchVersion=0.0.1"
+Set "Core_ArchName=Cyan Silver"
 
 :: Features
 :: Allow system files to be directly loaded?
-Set "Core.AllowModuleOffSet=False"
+Set "Core_AllowModuleOffSet=True"
 :: Require user login on boot?
-Set "Core.RequireUser=True"
+Set "Core_RequireUser=False"
 :: Enable Graphics (color)?
-Set "Core.EnableGraphics=True"
+Set "Core_EnableGraphics=True"
 :: Enable user authentication control (requiring passwords to login, etc)?
-Set "Core.EnableUserAuthentication=True"
+Set "Core_EnableUserAuthentication=True"
 
 :: Reload client script
-If Defined Core.Version (
-	If Defined Core.Directory (
-		If Defined Core.Arch (
+If Defined Core_Version (
+	If Defined Core_Directory (
+		If Defined Core_Arch (
 			:: Not Required To Boot
-			If Defined Core.ArchVersion Set "Core.HasVersion=1"
-			If Defined Core.ArchName Set "Core.HasName=1"
+			If Defined Core_ArchVersion Set "Core_HasVersion=1"
+			If Defined Core_ArchName Set "Core_HasName=1"
 			:: Define Core Arch Version and Core Arch Name If They Don't Exist
-			If Not Defined Core.ArchVersion Set "Core.ArchVersion=Unknown"
-			If Not Defined Core.ArchName Set "Core.ArchName=Unknown"
+			If Not Defined Core_ArchVersion Set "Core_ArchVersion=Unknown"
+			If Not Defined Core_ArchName Set "Core_ArchName=Unknown"
 			
 			:: Jump Back to System
-			Set "Core.IsPreLoaded=True"
-			If Exist "%cd%\..\sys_init.cmd" (
-				Pushd "%cd%\.."
-				sys_init -CorePreLoaded Core.Core True
+			Set "Core_IsPreLoaded=True"
+			If Exist "%cd%\sys_init.cmd" (
+				sys_init -CorePreLoaded Core_Core True
 			) Else (
-				Echo Missing required system file "core_init.cmd"
+				Echo Missing required system file "sys_init.cmd"
 				Pause>Nul
 			)
 		) Else (

@@ -3,56 +3,57 @@ SetLocal EnableExtensions EnableDelayedExpansion
 Goto Module_Config
 
 :Module_Config
-If "!Core_AllowModuleOffSet!"=="0" (
+If "!Core_AllowModuleOffSet!"=="False" (
 	If "%1"=="-LoadModule" (
 		Set "count=0"
-		If "!Core_RequireUser!"=="1" (
+		If "!Core_RequireUser!"=="True" (
 			If "!Uac_Username!"=="" (
 				:: Handle error here ?
 				Exit
 			)
-			Goto Entry
+			Goto Module_Process
 		)
 	) Else (
 		:: Handle error here ?
 		Exit
 	)
 ) Else (
-	If "!Core_RequireUser!"=="1" (
+	If "!Core_RequireUser!"=="True" (
 		If "!Uac_Username!"=="" (
 			:: Handle error here ?
 			Exit
 		)
-		Goto Entry
+		Goto Module_Process
 	) Else (
-		Goto Entry
+		Goto Module_Process
 	)
 )
 
-:Entry
+:Module_Process
 Set /P Command="<%cd%> (~)> "
 For %%a In (!Command!) Do (
     Set /A count+=1
     Set Value!count!=%%a
 )
-If "!Value1!"=="md" Goto MkDir
-If "!Value1!"=="mkdir" Goto MkDir
-If "!Value1!"=="rd" Goto RD
-If "!Value1!"=="rmdir" Goto RD
-If "!Value1!"=="cls" Goto Clear
-If "!Value1!"=="clear" Goto Clear
-If "!Value1!"=="help" Goto Help
-If "!Value1!"=="commands" Goto Help
-If "!Value1!"=="refresh" Goto Refresh
-If "!Value1!"=="dir" Goto Ls
-If "!Value1!"=="ls" Goto Ls
-If "!Value1!"=="time" Goto Time
-If "!Value1!"=="date" Goto Date
-If "!Value1!"=="log" Goto Log
-If "!Value1!"=="sysinfo" Goto SysInfo
-If "!Value1!"=="mkfile" Goto MkFile
-If "!Value1!"=="delfile" Goto DelFile
-Goto Loop
+If "!Value1!"=="test"		Goto Module_Command_Test
+If "!Value1!"=="md" 		Goto Module_Command_MkDir
+If "!Value1!"=="mkdir" 		Goto Module_Command_MkDir
+If "!Value1!"=="rd" 		Goto Module_Command_RmDir
+If "!Value1!"=="rmdir" 		Goto Module_Command_RmDir
+If "!Value1!"=="cls" 		Goto Module_Command_Clear
+If "!Value1!"=="clear" 		Goto Module_Command_Clear
+If "!Value1!"=="help" 		Goto Module_Command_Help
+If "!Value1!"=="commands" 	Goto Module_Command_Help
+If "!Value1!"=="refresh" 	Goto Module_Command_Refresh
+If "!Value1!"=="dir" 		Goto Module_Command_ListDir
+If "!Value1!"=="ls" 		Goto Module_Command_ListDir
+If "!Value1!"=="time" 		Goto Module_Command_Time
+If "!Value1!"=="date" 		Goto Module_Command_Date
+If "!Value1!"=="clock" 		Goto Module_Command_Clock
+If "!Value1!"=="sysinfo" 	Goto Module_Command_SysInfo
+If "!Value1!"=="mkfile" 	Goto Module_Command_MkFile
+If "!Value1!"=="delfile" 	Goto Module_Command_DelFile
+Goto Module_Process
 
 :Loop
 Set currentDir=%cd%
@@ -160,7 +161,7 @@ Echo.
 Echo ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Echo Version: [ 0.0.1 ] - Release: [ Alpha ]
 Echo.
-Echo New updates here: [ https://github.com/ShadowRain-Revived/ShadowRain ] 
+Echo New updates here: [ https://github.com/ShadowRain-Revived/ShadowRain-SilverLight ] 
 Echo For information join: [ https://discord.gg/VqjdxdE ]
 Echo ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 Echo.
