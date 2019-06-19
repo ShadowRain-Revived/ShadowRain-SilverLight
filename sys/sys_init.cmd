@@ -12,7 +12,7 @@ If "%Core_AllowModuleOffSet%"=="False" (
 Exit
 
 :System_LoadCore
-If "%4"=="debug" Set "DebugMode=True"
+If "%4"=="debug" Set /A "DebugMode=True"
 core\core -PreInit Core_Core
 Echo Something happened.
 Exit
@@ -31,14 +31,11 @@ Exit
 :System_LoadSystem
 Pause
 If Exist "core\core" If Exist "graphics\graphics" (
-	Cd ..\modules
 	Pause
 	0.0.1.bat
 	Echo Something happened.
 	Pause>Nul
 	Exit
-	:: Other system files here
 	If Exist "sys\ErrorHandler" If Exist "sys\UacSys" If Exist "sys\CommandHandler" (
-		:: everything is OK
 	)
 )

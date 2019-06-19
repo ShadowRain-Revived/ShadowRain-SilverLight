@@ -6,21 +6,21 @@ If "%Core_AllowModuleOffSet%"=="False" (
 )
 
 :Graphics_Graphics
-Set "Graphics_Graphics=LightEngine" 
-Set "Graphics_Version=0.0.1"
-If "%Core_EnableGraphics%"=="True" Set "hasColor=True"
-If "%hasColor%"=="True" Set "Graphics_DefaultColor=0D" 
-If "%hasColor%"=="True" Set "Graphics_Information=0B"
-If "%hasColor%"=="True" Set "Graphics_ScriptColor=8F" 
-If "%hasColor%"=="True" Set "Graphics_ErrorColor=04"
-If "%hasColor%"=="True" Set "Graphics_SystemFault=5F"
+Set /A "Graphics_Graphics=LightEngine" 
+Set /A "Graphics_Version=0.0.1"
+If "%Core_EnableGraphics%"=="True" Set /A "hasColor=True"
+If "%hasColor%"=="True" Set /A "Graphics_DefaultColor=0D" 
+If "%hasColor%"=="True" Set /A "Graphics_Information=0B"
+If "%hasColor%"=="True" Set /A "Graphics_ScriptColor=8F" 
+If "%hasColor%"=="True" Set /A "Graphics_ErrorColor=04"
+If "%hasColor%"=="True" Set /A "Graphics_SystemFault=5F"
 If "%hasColor%"=="True" Goto Graphics_CheckGraphics
 
-Set "Graphics_DefaultColor=0F"
-Set "Graphics_Information=0F"
-Set "Graphics_ScriptColor=0F"
-Set "Graphics_ErrorColor=0F"
-Set "Graphics_SystemFault=0F"
+Set /A "Graphics_DefaultColor=0F"
+Set /A "Graphics_Information=0F"
+Set /A "Graphics_ScriptColor=0F"
+Set /A "Graphics_ErrorColor=0F"
+Set /A "Graphics_SystemFault=0F"
 
 :Graphics_CheckGraphics
 :: Check if all required values are set.

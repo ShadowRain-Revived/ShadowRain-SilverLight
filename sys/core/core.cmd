@@ -4,37 +4,34 @@ Exit
 
 :Core_Core
 :: Globals
-Set "Core_Version=0.0.1"
-Set "Core_Directory=%cd%"
-Set "Core_Arch=CS"
+Set /A "Core_Version=0.0.1"
+Set /A "Core_Directory"="%cd%"
+Set /A "Core_Arch=CS"
 
 :: Architecture Variables (Only edit if making a custom core)
-Set "Core_ArchVersion=0.0.1"
-Set "Core_ArchName=Cyan Silver"
+Set /A "Core_ArchVersion=0.0.1"
+Set /A "Core_ArchName=Cyan Silver"
 
 :: Features
 :: Allow system files to be directly loaded?
-Set "Core_AllowModuleOffSet=True"
+Set /A "Core_AllowModuleOffSet=True"
 :: Require user login on boot?
-Set "Core_RequireUser=False"
+Set /A "Core_RequireUser=False"
 :: Enable Graphics (color)?
-Set "Core_EnableGraphics=True"
+Set /A "Core_EnableGraphics=True"
 :: Enable user authentication control (requiring passwords to login, etc)?
-Set "Core_EnableUserAuthentication=True"
+Set /A "Core_EnableUserAuthentication=True"
 
 :: Reload client script
 If Defined Core_Version (
 	If Defined Core_Directory (
 		If Defined Core_Arch (
-			:: Not Required To Boot
-			If Defined Core_ArchVersion Set "Core_HasVersion=1"
-			If Defined Core_ArchName Set "Core_HasName=1"
-			:: Define Core Arch Version and Core Arch Name If They Don't Exist
-			If Not Defined Core_ArchVersion Set "Core_ArchVersion=Unknown"
-			If Not Defined Core_ArchName Set "Core_ArchName=Unknown"
-			
-			:: Jump Back to System
-			Set "Core_IsPreLoaded=True"
+			If Defined Core_ArchVersion Set /A "Core_HasVersion=1"
+			If Defined Core_ArchName Set /A "Core_HasName=1"
+			If Not Defined Core_ArchVersion Set /A "Core_ArchVersion=Unknown"
+			If Not Defined Core_ArchName Set /A "Core_ArchName=Unknown"
+
+			Set /A "Core_IsPreLoaded=True"
 			If Exist "%cd%\sys_init.cmd" (
 				sys_init -CorePreLoaded Core_Core True
 			) Else (
