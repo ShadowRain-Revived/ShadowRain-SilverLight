@@ -31,10 +31,12 @@ If Defined Core_Name (
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+							Pause>Nul
 							Exit
 						)
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnabledExtendedSecurity - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
@@ -47,15 +49,18 @@ If Defined Core_Name (
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+							Pause>Nul
 							Exit
 						)
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnabledExtendedSecurity - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				)
 			) Else (
 				Echo Fatal Error: Core is missing required feature EnableDefaults - Please send a bug report immediately.
+				Pause>Nul
 				Exit
 			)
 		) Else (
@@ -69,10 +74,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -84,10 +91,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
@@ -104,10 +113,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -119,10 +130,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
@@ -137,10 +150,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -152,10 +167,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
@@ -175,10 +192,12 @@ If Defined Core_Name (
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+							Pause>Nul
 							Exit
 						)
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnabledExtendedSecurity - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
@@ -191,15 +210,18 @@ If Defined Core_Name (
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+							Pause>Nul
 							Exit
 						)
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnabledExtendedSecurity - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				)
 			) Else (
 				Echo Fatal Error: Core is missing required feature EnableDefaults - Please send a bug report immediately.
+				Pause>Nul
 				Exit
 			)
 		) Else (
@@ -213,10 +235,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -228,10 +252,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
@@ -248,10 +274,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -263,10 +291,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
@@ -281,10 +311,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
 					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			) Else (
@@ -296,10 +328,12 @@ If Defined Core_Name (
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
+						Pause>Nul
 						Exit
 					)
 				) Else (
-					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately
+					Echo Fatal Error: Core is missing required feature EnableExtendedSecurity - Please send a bug report immediately.
+					Pause>Nul
 					Exit
 				)
 			)
