@@ -27,7 +27,7 @@ If Defined Core_Name (
 					Color 0B
 					If Defined Core_EnableExtendedSecurity (
 						If Defined Core_EnableWildStart (
-							If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+							If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -45,7 +45,7 @@ If Defined Core_Name (
 					rem ### Loopback the check if graphics arent enabled @ EnabledExtendedSecurity ###
 					If Defined Core_EnableExtendedSecurity (
 						If Defined Core_EnableWildStart (
-							If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+							If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -70,7 +70,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -87,7 +87,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -109,7 +109,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -126,7 +126,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -146,7 +146,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -163,7 +163,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -188,7 +188,7 @@ If Defined Core_Name (
 					Color 0B
 					If Defined Core_EnableExtendedSecurity (
 						If Defined Core_EnableWildStart (
-							If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+							If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -206,7 +206,7 @@ If Defined Core_Name (
 					rem ### Loopback the check if graphics arent enabled @ EnabledExtendedSecurity ###
 					If Defined Core_EnableExtendedSecurity (
 						If Defined Core_EnableWildStart (
-							If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+							If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 							Goto Core_Startup
 						) Else (
 							Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -231,7 +231,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -248,7 +248,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -270,7 +270,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -287,7 +287,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -307,7 +307,7 @@ If Defined Core_Name (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
@@ -324,7 +324,7 @@ If Defined Core_Name (
 				Echo Warning: The core reports a feature that should be enabled is disabled, Continuing.
 				If Defined Core_EnableExtendedSecurity (
 					If Defined Core_EnableWildStart (
-						If "!Core_EnableWildStart!"=="True" Echo Warning: The core reports a feature that should be disabled is enabled, Continuing.
+						If !Core_EnableWildStart!=="True" ( Echo Warning: The core reports a feature that should be disabled is enabled, Continuing. )
 						Goto Core_Startup
 					) Else (
 						Echo Fatal Error: Core is missing required feature EnableWildStart - Please send a bug report immediately.
