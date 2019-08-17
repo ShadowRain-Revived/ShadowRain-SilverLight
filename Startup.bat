@@ -59,8 +59,8 @@ If Defined Core_Name (
 				Exit
 			)
 		) Else (
-			Set "Core_Arch"=="Unknown"
-			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics
+			Set Core_Arch="Unknown"
+			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics ###
 			If Defined Core_EnableGraphics (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
@@ -93,8 +93,8 @@ If Defined Core_Name (
 			)
 		)
 	) Else (
-		rem ### Loopback the check is Core_Version wasnt defined @ Core_Arch
-		Set "Core_Version"=="Unknown"
+		rem ### Loopback the check is Core_Version wasnt defined @ Core_Arch ###
+		Set Core_Version="Unknown"
 		If Defined Core_Arch (
 			If Defined Core_EnableGraphics (
 				Color 0B
@@ -127,8 +127,8 @@ If Defined Core_Name (
 				)
 			)
 		) Else (
-			Set "Core_Arch"=="Unknown"
-			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics
+			Set Core_Arch="Unknown"
+			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics ###
 			If Defined Core_EnableGraphics (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
@@ -162,8 +162,8 @@ If Defined Core_Name (
 		)
 	)
 ) Else (
-	Set "Core_Name"=="Unknown"
-	rem ### Loopback the check if Core_Name wasnt defined @ Core_Version
+	Set Core_Name="Unknown"
+	rem ### Loopback the check if Core_Name wasnt defined @ Core_Version ###
 	If Defined Core_Version (
 		If Defined Core_Arch (
 			If Defined Core_EnableDefaults (
@@ -203,8 +203,8 @@ If Defined Core_Name (
 				Exit
 			)
 		) Else (
-			Set "Core_Arch"=="Unknown"
-			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics
+			Set Core_Arch="Unknown"
+			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics ###
 			If Defined Core_EnableGraphics (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
@@ -237,8 +237,8 @@ If Defined Core_Name (
 			)
 		)
 	) Else (
-		rem ### Loopback the check is Core_Version wasnt defined @ Core_Arch
-		Set "Core_Version"=="Unknown"
+		rem ### Loopback the check is Core_Version wasnt defined @ Core_Arch ###
+		Set Core_Version="Unknown"
 		If Defined Core_Arch (
 			If Defined Core_EnableGraphics (
 				Color 0B
@@ -271,8 +271,8 @@ If Defined Core_Name (
 				)
 			)
 		) Else (
-			Set "Core_Arch"=="Unknown"
-			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics
+			Set Core_Arch="Unknown"
+			rem ### Loopback the check if Core_Arch wasnt defined @ EnableGraphics ###
 			If Defined Core_EnableGraphics (
 				Color 0B
 				If Defined Core_EnableExtendedSecurity (
@@ -310,4 +310,15 @@ Exit
 
 :Core_Startup
 Echo Somehow we made it this far.
+Echo.
+Echo Core Information Test:
+Echo 	- Core_Name: !Core_Name!
+Echo 	- Core_Arch: !Core_Arch!
+Echo 	- Core_Version: !Core_Version!
+Echo.
+Echo Core Features Test:
+Echo 	- Core_EnableDefaults: !Core_EnableDefaults!
+Echo 	- Core_EnableGraphics: !Core_EnableGraphics!
+Echo 	- Core_EnableExtendedSecurity: !Core_EnableExtendedSecurity!
+Echo 	- Core_EnableWildStart: !Core_EnableWildStart!
 Pause>Nul
